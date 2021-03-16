@@ -11,6 +11,9 @@ import java.awt.Event.UP
 
 import io.appium.java_client.touch.WaitOptions
 import io.appium.java_client.touch.offset.PointOption
+import org.openqa.selenium.WebElement
+import org.openqa.selenium.support.ui.ExpectedConditions
+import org.openqa.selenium.support.ui.WebDriverWait
 import java.lang.IllegalArgumentException
 
 
@@ -36,7 +39,6 @@ fun swipeScreen(driver: AppiumDriver<*>, dir: Direction) {
         Direction.UP -> PointOption.point(dims.width / 2, edgeBorder)
         Direction.LEFT -> PointOption.point(edgeBorder, dims.height / 2)
         Direction.RIGHT -> PointOption.point(dims.width - edgeBorder, dims.height / 2)
-        else -> throw IllegalArgumentException("swipeScreen(): dir: '$dir' NOT supported")
     }
 
     // execute swipe using TouchAction
@@ -62,4 +64,9 @@ fun swipeScreen(driver: AppiumDriver<*>, dir: Direction) {
     } catch (e: InterruptedException) {
         // ignore
     }
+}
+
+fun isElementVisible(element: WebElement?, appiumDriver: AppiumDriver<*>) {
+    val wait = WebDriverWait(appiumDriver, 30)
+    wait.until(ExpectedConditions.visibilityOf(element))
 }
