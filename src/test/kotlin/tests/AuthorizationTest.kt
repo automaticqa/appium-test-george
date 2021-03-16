@@ -1,34 +1,37 @@
 package tests
 
-import io.appium.java_client.MobileElement
+import actions.Direction
+import actions.swipeScreen
 import io.appium.java_client.android.AndroidDriver
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
-import org.openqa.selenium.By
+import screens.welcome.WelcomeTourScreen
 import utils.ProjectCapabilities
 import java.lang.Thread.sleep
 import java.net.MalformedURLException
 
 class AuthorizationTest : BaseTest() {
 
+    lateinit var welcomeTourScreen : WelcomeTourScreen
+
     @Before
     @Throws(MalformedURLException::class)
     fun setup() {
-        driver = AndroidDriver(server, ProjectCapabilities.getAndroidBaseCapabilities())
+        appiumDriver = AndroidDriver(server, ProjectCapabilities.getAndroidBaseCapabilities())
+        welcomeTourScreen = WelcomeTourScreen(appiumDriver)
     }
 
     @Test
     fun someTest() {
-        sleep(50000)
-        val oneNumberButton: MobileElement =
-            driver.findElement(By.id("cz.csas.georgego:id/erste_locker_btn_pin_1")) as MobileElement
-
-        oneNumberButton.click()
+        sleep(7000)
+        swipeScreen(appiumDriver, Direction.LEFT)
+        sleep(1000)
+        swipeScreen(appiumDriver, Direction.RIGHT)
     }
 
     @After
     fun tearDown() {
-        driver.quit()
+        appiumDriver.quit()
     }
 }
