@@ -6,11 +6,11 @@ import io.appium.java_client.android.AndroidDriver
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
+import screens.WelcomeTourScreen
 import screens.login.FirstLoginToGeorgeScreen
 import screens.login.LoginDemoOrSmsScreen
 import screens.login.LoginDemoScreen
 import screens.login.LoginWithUserIdScreen
-import screens.welcome.WelcomeTourScreen
 import java.net.MalformedURLException
 import java.util.concurrent.TimeUnit
 
@@ -57,7 +57,7 @@ class AuthorizationTest : BaseTest() {
     fun `user should be able to get back to welcome tour screen`() {
         val welcomeTourScreensQuantity = 4
         welcomeTourScreen.isScreenDisplayed()
-        repeat(welcomeTourScreensQuantity){
+        repeat(welcomeTourScreensQuantity) {
             swipeScreen(appiumDriver, Direction.LEFT)
         }
 

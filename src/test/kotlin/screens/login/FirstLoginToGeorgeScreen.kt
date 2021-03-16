@@ -13,13 +13,13 @@ class FirstLoginToGeorgeScreen(appiumDriver: AppiumDriver<*>) : BaseScreen(appiu
     }
 
     @FindBy(id = "cz.csas.georgego:id/kyc_tour_title_txt")
-    lateinit var kycTourTitle : WebElement
+    lateinit var kycTourTitle: WebElement
 
     @FindBy(id = "cz.csas.georgego:id/kyc_tour_login_btn")
-    lateinit var loginToGeorgeBtn : WebElement
+    lateinit var loginToGeorgeBtn: WebElement
 
     @FindBy(id = "cz.csas.georgego:id/kyc_tour_kyc_btn")
-    lateinit var getGeorgeBtn : WebElement
+    lateinit var getGeorgeBtn: WebElement
 
     override fun isScreenDisplayed() {
         waitForElementToBeVisible(kycTourTitle)

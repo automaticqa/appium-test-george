@@ -13,7 +13,7 @@ class LoginDemoScreen(appiumDriver: AppiumDriver<*>) : BaseScreen(appiumDriver) 
     }
 
     @FindBy(xpath = "cz.csas.georgego:id/erste_locker_vw_web_view")
-    lateinit var webView : WebElement
+    lateinit var webView: WebElement
 
     override fun isScreenDisplayed() {
         waitForElementToBeVisible(webView)

@@ -13,16 +13,16 @@ class LoginDemoOrSmsScreen(appiumDriver: AppiumDriver<*>) : BaseScreen(appiumDri
     }
 
     @FindBy(id = "cz.csas.georgego:id/tv_application_label")
-    lateinit var appLabel : WebElement
+    lateinit var appLabel: WebElement
 
     @FindBy(id = "cz.csas.georgego:id/ll_button")
-    lateinit var llBtn : WebElement
+    lateinit var llBtn: WebElement
 
     @FindBy(id = "cz.csas.georgego:id/btn_login_with_pass")
-    lateinit var loginWithPassSmsBtn : WebElement
+    lateinit var loginWithPassSmsBtn: WebElement
 
     @FindBy(id = "cz.csas.georgego:id/btn_login_with_demo_user")
-    lateinit var loginWithDemoBtn : WebElement
+    lateinit var loginWithDemoBtn: WebElement
 
     override fun isScreenDisplayed() {
         waitForElementToBeVisible(appLabel)

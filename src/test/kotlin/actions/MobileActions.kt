@@ -40,5 +40,5 @@ fun swipeScreen(driver: AppiumDriver<*>, dir: Direction) {
         return
     }
 
-    runCatching {Thread.sleep(animationTimeMs.toLong())}
+    runCatching { Thread.sleep(animationTimeMs.toLong()) }
 }

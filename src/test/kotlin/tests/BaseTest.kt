@@ -3,11 +3,11 @@ package tests
 import io.appium.java_client.AppiumDriver
 import io.appium.java_client.MobileElement
 import org.openqa.selenium.remote.DesiredCapabilities
+import screens.WelcomeTourScreen
 import screens.login.FirstLoginToGeorgeScreen
 import screens.login.LoginDemoOrSmsScreen
 import screens.login.LoginDemoScreen
 import screens.login.LoginWithUserIdScreen
-import screens.welcome.WelcomeTourScreen
 import utils.ProjectCapabilities
 import java.net.URL
 
