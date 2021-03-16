@@ -9,7 +9,6 @@ class ProjectCapabilities {
             val caps = DesiredCapabilities()
             caps.setCapability("automationName", "UiAutomator2")
             caps.setCapability("deviceName", "samsung-sm_n770f-RR8N105KP4F")
-            caps.setCapability("noReset", "true")
             caps.setCapability("appPackage", "cz.csas.georgego")
             caps.setCapability("appActivity", "at.beeone.george.SplashScreenActivity")
             caps.setCapability("appWaitPackage", "cz.csas.georgego")
